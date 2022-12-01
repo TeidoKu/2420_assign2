@@ -1,0 +1,15 @@
+[Unit]
+Description=sample webapp
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/home/server-user/.volta/bin/node /home/server-user/2420-assign-two/src/index.js
+User=server-user
+Restart=always
+RestartSec=20
+TimeoutStopSec=120
+SyslogIdentifier=web_app
+
+[Install]
+WantedBy=multi-user.target

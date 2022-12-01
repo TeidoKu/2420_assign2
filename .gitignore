@@ -1,0 +1,6 @@
+#gitignore file that ignore __pycatch__ folder
+
+# .gitignore
+node_modules
+package-lock.json
+.gitattributes
