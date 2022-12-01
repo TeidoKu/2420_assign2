@@ -158,3 +158,5 @@ follow the instructions on the volta website to install node for both server
 ![stsctl status](./images/server2.jpg)
 ![stsctl status](./images/app1.jpg)
 ![stsctl status](./images/app2.jpg)
+## load balancer IP
+Visit http://24.199.69.244/ to see the static HTML page
