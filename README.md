@@ -99,6 +99,7 @@ the following codes are a sample static HTML page
 
 ## Step 9: configure caddy server
 1. this is a sample for caddy server configuration file
+this file is locatated at /etc/caddy/Caddyfile
 ```
 http:// {
   root * /var/www/html
@@ -111,18 +112,17 @@ http:// {
 1. create a service file for your webapp
 ```
 [Unit]
-Description=Yay, a fastify webapp
+Description=sample webapp
 After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStart=/home/star/.volta/bin/node /home/star/appify/index.js
-User=star
-Group=star
+ExecStart=/home/server-user/.volta/bin/node /home/server-user/2420-assign-two/src/index.js
+User=server-user
 Restart=always
-RestartSec=10
-TimeoutStopSec=90
-SyslogIdentifier=hello_web
+RestartSec=20
+TimeoutStopSec=120
+SyslogIdentifier=web_app
 
 [Install]
 WantedBy=multi-user.target
