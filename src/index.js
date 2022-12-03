@@ -9,7 +9,7 @@ fastify.get('/app', async (request, reply) => {
 // Run the server!
 const start = async () => {
   try {
-    await fastify.listen({ port: 65535, host: '127.0.0.1' })
+    await fastify.listen({ port: 5050, host: '127.0.0.1' })
   } catch (err) {
     fastify.log.error(err)
     process.exit(1)
